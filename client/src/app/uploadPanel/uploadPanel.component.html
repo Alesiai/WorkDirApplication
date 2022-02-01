@@ -1,0 +1,17 @@
+<form class="form">
+  <h3 class="form title">Upload your json</h3>
+  <hr>
+  <p>
+    Selected folder: 
+    <b class="path"> {{ folder }}
+      </b>
+  </p>
+
+  <input type="file" (change)="onFileChange($event)"/>
+
+  <hr>
+  <button type="submit" [disabled]="!file || folder === null" class="btn form upload-button "
+    (click)="uploadJson()">
+    Upload
+  </button>
+</form>

@@ -1,0 +1,31 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+.form {
+    padding: 10px;
+    width: 100%;
+}
+
+.form.title {
+    text-align: center;
+}
+
+.form.upload-button {
+    margin-left: 30%;
+    width: 40%;
+    background-color: rgb(93, 211, 70);
+} 
+
+.form.toggle {
+  display: flex;
+  flex-direction: row;
+}
+.border-bottom-input {
+    border:0; 
+    border-bottom:1px solid #eee; 
+  }
+
+.path{
+    color: #5ba45a;
+}

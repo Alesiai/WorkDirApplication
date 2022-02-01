@@ -1,0 +1,17 @@
+<accordion *ngIf="directory" [isAnimated]="true"> 
+  <accordion-group 
+    *ngFor="let child of directory.followingFolders"
+    heading="{{ child.path }}"
+    (click)="click(child.path)"
+    class="ml-2 directoryLine"
+  >  
+    <div 
+      *ngIf="child.followingFolders"
+      (click)="$event.stopPropagation();"
+    >
+      <app-tree [directory]="child"></app-tree>
+    </div>
+  </accordion-group>
+</accordion>
+
+
