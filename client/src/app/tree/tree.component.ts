@@ -10,6 +10,7 @@ import { Directory } from '../_models/Directory';
 export class TreeComponent implements OnInit {
   @Input() directory: Directory;
   
+  
   constructor(private structureService: StructureService) { }
 
   ngOnInit(): void {
