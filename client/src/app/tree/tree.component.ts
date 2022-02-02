@@ -17,7 +17,7 @@ export class TreeComponent implements OnInit {
   }
 
   public click(path: string): void {
-    this.structureService.folder.next(path.replace('\\','/'));
+    this.structureService.folder.next(path.replace('\\','\\'));
     
     this.structureService.getStructure(path).subscribe(response => {
       this.directory.followingFolders.find(el => el.path === path).followingFolders = response.followingFolders;
