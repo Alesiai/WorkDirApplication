@@ -23,12 +23,16 @@ namespace API.Services
 
         private void CreateDirectoriesFromJson(string folder, JToken children)
         {
+            if (!folder.EndsWith("/"))
+            {
+                folder += "/";
+            }
+
             var dirictories = children.Children().Select(_ => folder).ToList();
 
             int i = 0;
             foreach(var child in children.Children())
             {
-                
                 if(child is JProperty property){
                     folder = dirictories[i] + property.Name + "/";
                     System.IO.Directory.CreateDirectory(folder);
